@@ -1,0 +1,47 @@
+[
+    {
+        "name": "SQL Аналитик/Разработчик",
+        "salary_from": 150000,
+        "salary_to": "Не указано",
+        "currency": "RUR",
+        "url": "https://hh.ru/vacancy/93048119",
+        "requirement": "Продвинутый SQL (Функции, Процедуры, Большие запросы), желательно MSSQL. Продвинутый Excel. Опыт работы от 1 года в аналитике. Опыт работы с...",
+        "responsibility": "Выгружать и оформлять данные в отчеты. Работать с исходными данными. Заниматься автоматизацией выгрузок. Анализировать чужие запросы. Оптимизировать запросы. "
+    },
+    {
+        "name": "Аналитик данных / Data Analyst",
+        "salary_from": 150000,
+        "salary_to": 200000,
+        "currency": "RUR",
+        "url": "https://hh.ru/vacancy/93059001",
+        "requirement": "...в идеале опыт написания процедур на plsql). Желательно знать основы Python для работы с данными. Желательно иметь опыт работы с...",
+        "responsibility": "Создание и совершенствование, совместно с бизнес-командой, перечня основных операционных показателей и методологии их расчета. Создание витрин, дэшбордов и регулярных..."
+    },
+    {
+        "name": "Manual QA Engineer (Mid+)",
+        "salary_from": 3000,
+        "salary_to": "Не указано",
+        "currency": "USD",
+        "url": "https://hh.ru/vacancy/92227917",
+        "requirement": "Experience with bug-tracking systems (YouTrack, Jira). Good to Have: Knowledge of Python. Automation skills. Experience with automated testing. ",
+        "responsibility": "Conduct functional and non-functional testing. Prepare test documentation. Document defects and monitor their resolution."
+    },
+    {
+        "name": "Python web3 разработчик",
+        "salary_from": 250000,
+        "salary_to": 300000,
+        "currency": "RUR",
+        "url": "https://hh.ru/vacancy/92712797",
+        "requirement": "Python, django, web3, PostgreSQL. Заниение принципов работы dex. Будет плюсом понимание смарт-контрактов для EVM.",
+        "responsibility": "Разработка тороговых ботов для dex на сетях bsc, eth, solana. Разработка аналлитических инструментов для dexs."
+    },
+    {
+        "name": "Jun+/Middle Python разработчик",
+        "salary_from": 90000,
+        "salary_to": 160000,
+        "currency": "RUR",
+        "url": "https://hh.ru/vacancy/93090286",
+        "requirement": "Коммерческий опыт разработки на Python от 1,5 лет. Коммерческий опыт использования одного из ассинхронных веб фреймворков. Опыт написания высоконагруженных...",
+        "responsibility": "Разработка API. Разработка архитектурных решений действующего проекта. Интеграции с внешними сервисами. Работа с базами данных PostgreSQL. Работа с брокерами сообщений."
+    }
+]
