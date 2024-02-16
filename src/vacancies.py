@@ -1,4 +1,4 @@
-from src.function import delete_highlight, get_validation
+from src.function import delete_highlight, get_validation, get_validation_salary
 
 
 class Vacancies:
@@ -17,11 +17,11 @@ class Vacancies:
         if data_api.get('salary') is None:
             self.salary_from = data_api['salary_from']
         else:
-            self.salary_from = get_validation(data_api['salary']['from'])
+            self.salary_from = get_validation_salary(data_api['salary']['from'])
         if data_api.get('salary') is None:
             self.salary_to = data_api['salary_to']
         else:
-            self.salary_to = get_validation(data_api['salary']['to'])
+            self.salary_to = get_validation_salary(data_api['salary']['to'])
         if data_api.get('salary') is None:
             self.currency = data_api['currency']
         else:
@@ -52,3 +52,8 @@ class Vacancies:
         print(self.url)
         print(self.requirement)
         print(self.responsibility)
+
+    def get_print_list_vacancies(self):
+        for i in self.list_vacancies:
+            i.get_print_class_field()
+            print('=' * 100)

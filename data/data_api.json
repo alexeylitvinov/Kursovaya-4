@@ -1,39 +1,48 @@
 [
     {
-        "name": "SQL Аналитик/Разработчик",
-        "salary_from": 150000,
-        "salary_to": "Не указано",
+        "name": "React разработчик",
+        "salary_from": 500000,
+        "salary_to": 0,
         "currency": "RUR",
-        "url": "https://hh.ru/vacancy/93048119",
-        "requirement": "Продвинутый SQL (Функции, Процедуры, Большие запросы), желательно MSSQL. Продвинутый Excel. Опыт работы от 1 года в аналитике. Опыт работы с...",
-        "responsibility": "Выгружать и оформлять данные в отчеты. Работать с исходными данными. Заниматься автоматизацией выгрузок. Анализировать чужие запросы. Оптимизировать запросы. "
+        "url": "https://hh.ru/vacancy/93304212",
+        "requirement": "Пишите про свой опыт в отклике на вакансию.",
+        "responsibility": "Не указано"
     },
     {
-        "name": "Аналитик данных / Data Analyst",
+        "name": "Backend-разработчик на Python",
         "salary_from": 150000,
         "salary_to": 200000,
         "currency": "RUR",
-        "url": "https://hh.ru/vacancy/93059001",
-        "requirement": "...в идеале опыт написания процедур на plsql). Желательно знать основы Python для работы с данными. Желательно иметь опыт работы с...",
-        "responsibility": "Создание и совершенствование, совместно с бизнес-командой, перечня основных операционных показателей и методологии их расчета. Создание витрин, дэшбордов и регулярных..."
+        "url": "https://hh.ru/vacancy/92935405",
+        "requirement": "2 андроид разработчика.",
+        "responsibility": "Микросервисами, микросервисной архитектурой. О продукте. Команда: 2 фронтенд разработчика. 1 продакт-оунер. 1 руководитель проекта. Разработка и поддержка высококачественного программного..."
     },
     {
-        "name": "Manual QA Engineer (Mid+)",
-        "salary_from": 3000,
-        "salary_to": "Не указано",
-        "currency": "USD",
-        "url": "https://hh.ru/vacancy/92227917",
-        "requirement": "Experience with bug-tracking systems (YouTrack, Jira). Good to Have: Knowledge of Python. Automation skills. Experience with automated testing. ",
-        "responsibility": "Conduct functional and non-functional testing. Prepare test documentation. Document defects and monitor their resolution."
-    },
-    {
-        "name": "Python web3 разработчик",
-        "salary_from": 250000,
-        "salary_to": 300000,
+        "name": "Python разработчик",
+        "salary_from": 140000,
+        "salary_to": 0,
         "currency": "RUR",
-        "url": "https://hh.ru/vacancy/92712797",
-        "requirement": "Python, django, web3, PostgreSQL. Заниение принципов работы dex. Будет плюсом понимание смарт-контрактов для EVM.",
-        "responsibility": "Разработка тороговых ботов для dex на сетях bsc, eth, solana. Разработка аналлитических инструментов для dexs."
+        "url": "https://hh.ru/vacancy/93153655",
+        "requirement": "Умение читать код и быстро в нем разбираться. Уверенное знание Python, опыт в Django, FastAPI. Умение писать оптимизированные запросы на...",
+        "responsibility": "Разработка клиентских сервисов на основе FastAPI, Django, PlotlyDash. Разработка новых методов клиентского API. Разработка аналитических дашбордов на основе полученных данных..."
+    },
+    {
+        "name": "Python Backend Developer",
+        "salary_from": 120000,
+        "salary_to": 0,
+        "currency": "RUR",
+        "url": "https://hh.ru/vacancy/92292859",
+        "requirement": "Опыт написания кода на Django/Fast API от 2х лет. Опыт работы с микросервисами. Умение писать юнит-тесты (pytest...",
+        "responsibility": "Разработка серверной части. Проектирование архитектуры кода, проведение грумминг сессий с командой. Написание свежего и чистого кода, никакого легаси (все пишется..."
+    },
+    {
+        "name": "Тестировщик",
+        "salary_from": 120000,
+        "salary_to": 180000,
+        "currency": "RUR",
+        "url": "https://hh.ru/vacancy/93217087",
+        "requirement": "Плюсом будет опыт скриптинга (sh, powershell, python), работа с контейнеризацией (docker\\k8) и средствами виртуализации (vmware, hyperv, kvm и...",
+        "responsibility": "Мы занимаемся разработкой, развитием и поддержкой комплексного продукта СКДПУ НТ. Он обеспечивает всю функциональность системы контроля действий привилегированных пользователей: от..."
     },
     {
         "name": "Jun+/Middle Python разработчик",

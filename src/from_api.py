@@ -39,3 +39,9 @@ class HHRuApi(VacanciesFromApi):
     @property
     def data_api(self):
         return self.__data_api
+
+    @staticmethod
+    def get_status_code():
+        response = requests.get(URL_HH_RU)
+        if response.status_code >= 400:
+            return f'no service'
