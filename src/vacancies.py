@@ -1,46 +1,38 @@
-from src.function import delete_highlight, get_validation, get_validation_salary
+from src.function import delete_highlight, get_validation_text, get_validation_salary
+from src.menu import MenuUser
 
 
 class Vacancies:
     """
-    Класс вакансий
+    Класс получения вакансий из запроса на сайт
     """
     list_vacancies = []
 
-    def __init__(self, data_api):
-        """
-        Инициализация класса. Делаем проверку на наличие ключей в случае загрузки данных из файла
-        :param data_api: dict
-        """
+    def __init__(self):
+        self.name = None
+        self.salary_from = None
+        self.salary_to = None
+        self.currency = None
+        self.url = None
+        self.requirement = None
+        self.responsibility = None
 
+    def get_vacancies(self, data_api: dict):
+        """
+        Получение полей класса из запроса на сайт
+        :param data_api: dict
+        :return: class field
+        """
         self.name = data_api['name']
-        if data_api.get('salary') is None:
-            self.salary_from = data_api['salary_from']
-        else:
-            self.salary_from = get_validation_salary(data_api['salary']['from'])
-        if data_api.get('salary') is None:
-            self.salary_to = data_api['salary_to']
-        else:
-            self.salary_to = get_validation_salary(data_api['salary']['to'])
-        if data_api.get('salary') is None:
-            self.currency = data_api['currency']
-        else:
-            self.currency = data_api['salary']['currency']
-        if data_api.get('alternate_url') is None:
-            self.url = data_api['url']
-        else:
-            self.url = data_api['alternate_url']
-        if data_api.get('snippet') is None:
-            self.requirement = data_api['requirement']
-        else:
-            self.requirement = delete_highlight(get_validation(data_api['snippet']['requirement']))
-        if data_api.get('snippet') is None:
-            self.responsibility = data_api['responsibility']
-        else:
-            self.responsibility = delete_highlight(get_validation(data_api['snippet']['responsibility']))
+        self.salary_from = get_validation_salary(data_api['salary']['from'])
+        self.salary_to = get_validation_salary(data_api['salary']['to'])
+        self.currency = data_api['salary']['currency']
+        self.url = data_api['alternate_url']
+        self.requirement = delete_highlight(get_validation_text(data_api['snippet']['requirement']))
+        self.responsibility = delete_highlight(get_validation_text(data_api['snippet']['responsibility']))
         self.list_vacancies.append(self)
 
-    def get_print_class_field(self):
+    def get_print_class_field(self) -> None:
         """
         Выводим на экран поля класса
         :return: None
@@ -53,7 +45,34 @@ class Vacancies:
         print(self.requirement)
         print(self.responsibility)
 
-    def get_print_list_vacancies(self):
+    def get_print_list_vacancies(self) -> None:
+        """
+        Вывод на экран списка полей класса
+        :return: None
+        """
         for i in self.list_vacancies:
             i.get_print_class_field()
-            print('=' * 100)
+            MenuUser.get_separator()
+
+
+class VacanciesFromFile(Vacancies):
+    """
+    Класс получения вакансий из сохраненного файла
+    """
+    def __init__(self):
+        super().__init__()
+
+    def get_vacancies(self, data_api: dict):
+        """
+        Получение полей класса из сохраненного файла
+        :param data_api: dict
+        :return: class field
+        """
+        self.name = data_api['name']
+        self.salary_from = data_api['salary_from']
+        self.salary_to = data_api['salary_to']
+        self.currency = data_api['currency']
+        self.url = data_api['url']
+        self.requirement = data_api['requirement']
+        self.responsibility = data_api['responsibility']
+        self.list_vacancies.append(self)

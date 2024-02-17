@@ -17,31 +17,32 @@ class HHRuApi(VacanciesFromApi):
 
     def __init__(self):
         self.__data_api = None
-        self.response_keys = {'text': '', 'salary': '', 'per_page': ''}
+        self.__response_keys = {'text': '', 'salary': '', 'per_page': ''}
 
-    def get_vacancies(self, text: str, salary: str, per_page: str):
+    def __str__(self):
+        return f'HH.ru'
+
+    def get_vacancies(self, text: str, salary: str, per_page: str) -> dict:
         """
         Получение вакансий в формате .json по ключам: ключевое слово, предполагаемая зарплата, количество вакансий.
-        Если пользователь не указал количество вакансий, то берутся максимально возможные 100 с одного запроса.
-        Если пользователь не указал предполагаемую зарплату, то берется 100
         :param text: str
         :param salary: str
         :param per_page: str
-        :return: data
+        :return: dict
         """
-        self.response_keys['text'] = text
-        self.response_keys['salary'] = salary
-        self.response_keys['per_page'] = per_page
-        response = requests.get(URL_HH_RU, self.response_keys)
+        self.__response_keys['text'] = text
+        self.__response_keys['salary'] = salary
+        self.__response_keys['per_page'] = per_page
+        response = requests.get(URL_HH_RU, self.__response_keys)
         self.__data_api = response.json()
         return self.__data_api
 
-    @property
-    def data_api(self):
-        return self.__data_api
-
     @staticmethod
-    def get_status_code():
+    def get_status_code() -> str:
+        """
+        Проверка доступности сервиса
+        :return: str
+        """
         response = requests.get(URL_HH_RU)
         if response.status_code >= 400:
             return f'no service'
