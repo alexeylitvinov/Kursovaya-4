@@ -33,8 +33,7 @@ class HHRuApi(VacanciesFromApi):
         self.__response_keys['text'] = text
         self.__response_keys['salary'] = salary
         self.__response_keys['per_page'] = per_page
-        response = requests.get(URL_HH_RU, self.__response_keys)
-        self.__data_api = response.json()
+        self.__data_api = HHRuApi.__get_response(self)
         return self.__data_api
 
     @staticmethod
@@ -46,3 +45,11 @@ class HHRuApi(VacanciesFromApi):
         response = requests.get(URL_HH_RU)
         if response.status_code >= 400:
             return f'no service'
+
+    def __get_response(self) -> dict:
+        """
+        Получение данных с сайта
+        :return: dict
+        """
+        response = requests.get(URL_HH_RU, self.__response_keys)
+        return response.json()
