@@ -6,7 +6,7 @@ URL_HH_RU = 'https://api.hh.ru/vacancies?&area=1&only_with_salary=true'
 
 class VacanciesFromApi(ABC):
     @abstractmethod
-    def get_vacancies(self, text, salary, per_page):
+    def get_vacancies_by_keys(self, text, salary):
         pass
 
 
@@ -17,22 +17,24 @@ class HHRuApi(VacanciesFromApi):
 
     def __init__(self):
         self.__data_api = None
-        self.__response_keys = {'text': '', 'salary': '', 'per_page': ''}
+        self.__response_keys = {'text': '', 'salary': '', 'per_page': '100'}
 
-    def __str__(self):
+    def __str__(self) -> str:
+        """
+        Строка с названием сервиса
+        :return: str
+        """
         return f'HH.ru'
 
-    def get_vacancies(self, text: str, salary: str, per_page: str) -> dict:
+    def get_vacancies_by_keys(self, text: str, salary: str) -> dict:
         """
         Получение вакансий в формате .json по ключам: ключевое слово, предполагаемая зарплата, количество вакансий.
         :param text: str
         :param salary: str
-        :param per_page: str
         :return: dict
         """
         self.__response_keys['text'] = text
         self.__response_keys['salary'] = salary
-        self.__response_keys['per_page'] = per_page
         self.__data_api = HHRuApi.__get_response(self)
         return self.__data_api
 

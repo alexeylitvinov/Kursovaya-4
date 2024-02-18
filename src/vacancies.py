@@ -54,11 +54,22 @@ class Vacancies:
             i.get_print_class_field()
             MenuUser.get_separator()
 
+    # @staticmethod
+    def get_top_vacancies(self, quantity: int) -> list:
+        """
+        Получение топ вакансий из отсортированного списка
+        :param quantity: int
+        :return: list
+        """
+        self.list_vacancies.sort(key=lambda x: x.salary_from, reverse=True)
+        return self.list_vacancies[:quantity]
+
 
 class VacanciesFromFile(Vacancies):
     """
     Класс получения вакансий из сохраненного файла
     """
+
     def __init__(self):
         super().__init__()
 

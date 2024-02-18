@@ -1,7 +1,6 @@
 from abc import ABC, abstractmethod
 import json
 
-
 class Saver(ABC):
     pass
 
@@ -22,6 +21,9 @@ class SaverUser(Saver):
     """
     Класс загрузки из файла и сохранения в файл найденной информации
     """
+    data_dict = {}
+    name_vacancy = []
+
     def load_vacancy(self, path_to_file: str) -> dict:
         """
         Загрузка данных из .json файла
@@ -40,7 +42,7 @@ class SaverUser(Saver):
         :return: file.json
         """
         with open(path_to_file, 'w', encoding='utf-8') as file:
-            json.dump(data, file, indent=4, ensure_ascii=False)
+            json.dump(data, file, indent=2, ensure_ascii=False)
 
     def delete_user_save(self, path_to_file: str) -> None:
         """

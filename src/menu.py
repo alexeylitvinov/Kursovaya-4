@@ -2,12 +2,13 @@ class MenuUser:
     """
     Класс пользовательского меню
     """
+
     def __init__(self):
         self.__num_answer = None
         self.__command = None
-        self.__number_vacancies = None
-        self.__salary = None
-        self.__job_name = None
+        self.number_vacancies = None
+        self.salary = None
+        self.name_vacancies = None
 
     @staticmethod
     def get_hello(string: str):
@@ -44,8 +45,7 @@ class MenuUser:
         :return: bool
         """
         answer = input(
-            'Сохранить найденные данные в файл? Нажмите "s" чтобы сохранить, чтобы продолжить нажмите '
-            '"ENTER"  ')
+            'Сохранить найденные данные в файл? Нажмите "s" чтобы сохранить, чтобы продолжить нажмите любую клавишу:  ')
         if answer == 'ы' or answer == 's':
             return True
         return False
@@ -56,7 +56,12 @@ class MenuUser:
         Вывод на экран декоративного разделителя
         :return: None
         """
-        print('=' * 100)
+        print('=' * 160)
+
+    @staticmethod
+    def get_name_vacancy_from_file(data: list):
+        print('Ключевые слова предыдущих сохраненных поисков:', *data)
+        MenuUser.get_separator()
 
     def get_command(self) -> str:
         """
@@ -83,7 +88,7 @@ class MenuUser:
 
     def get_key_world_for_find(self) -> str:
         """
-        Получение ключевого слова по вакансиям от пользователя с проверкой правильности введенных данных
+        Получение ключевого слова от пользователя по вакансиям с проверкой правильности введенных данных
         :return: str
         """
         while True:
@@ -91,13 +96,13 @@ class MenuUser:
             if user_input.isdigit() or user_input is None:
                 print('Не верно введено ключевое слово...')
             else:
-                self.__job_name = user_input
+                self.name_vacancies = user_input
                 break
-        return self.__job_name
+        return self.name_vacancies
 
     def get_key_salary_for_find(self) -> int:
         """
-        Получение ключевого слова по зарплате от пользователя с проверкой правильности введенных данных
+        Получение ключевого слова от пользователя по зарплате с проверкой правильности введенных данных
         :return: int
         """
         while True:
@@ -105,28 +110,23 @@ class MenuUser:
             if user_input.isnumeric() is False or user_input is None or int(user_input) <= 0:
                 print('На ввод доступны только числа...')
             else:
-                self.__salary = int(user_input)
+                self.salary = int(user_input)
                 break
-        return self.__salary
+        return self.salary
 
-    def get_per_page_for_find(self) -> int:
+    def get_top_from_find(self, data_list: list) -> int:
         """
-        Получение ключевого слова по количеству поиска от пользователя с проверкой правильности введенных данных
+        Получение количества топ вакансий от пользователя с проверкой правильности введенных данных
         :return: int
         """
         while True:
-            user_input = input('Введите сколько вакансий показать: ')
+            user_input = input('Введите сколько вакансий показать (на экран выводятся топ N вакансий по зарплате): ')
             if user_input.isnumeric() is False or user_input is None or int(user_input) > 100 or int(user_input) <= 0:
-                print('На ввод доступны только числа. Максимальное значение 100..')
+                print('На ввод доступны только числа. Максимальное значение 100...')
+            elif int(user_input) > len(data_list):
+                print(f'Найдено {len(data_list)} вакансий. Вы пытаетесь посмотреть больше...')
             else:
-                self.__number_vacancies = int(user_input)
+                self.number_vacancies = int(user_input)
                 break
-        return self.__number_vacancies
-
-    def get_all_keys(self) -> tuple:
-        """
-        Возвращаем все ключевые слова
-        :return: tuple
-        """
         MenuUser.get_separator()
-        return self.__job_name, self.__salary, self.__number_vacancies
+        return self.number_vacancies

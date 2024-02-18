@@ -34,8 +34,7 @@ def user_main():
                 break
             menu.get_key_world_for_find()
             menu.get_key_salary_for_find()
-            menu.get_per_page_for_find()
-            data = hh_ru.get_vacancies(*menu.get_all_keys())
+            data = hh_ru.get_vacancies_by_keys(menu.name_vacancies, menu.salary)
             try:
                 for i in data['items']:
                     vacancies = Vacancies()
@@ -46,20 +45,29 @@ def user_main():
                 if not vacancies:
                     menu.get_answer(0)
                 else:
-                    Vacancies.list_vacancies = (
-                        sorted(vacancies.list_vacancies, key=lambda x: x.salary_from, reverse=True))
+                    num = menu.get_top_from_find(vacancies.list_vacancies)
+                    vacancies.get_top_vacancies(num)
                     vacancies.get_print_list_vacancies()
                     if menu.get_answer_for_save() is True:
+                        if os.path.getsize(path_data_file) != 0:
+                            SaverUser.data_dict = saver.load_vacancy(path_data_file)
                         for i in vacancies.list_vacancies:
                             save_list.append(i.__dict__)
-                        saver.save_vacancy(save_list, path_data_file)
+                        SaverUser.data_dict[menu.name_vacancies] = save_list
+                        save_list = []
+                        Vacancies.list_vacancies = []
+                        saver.save_vacancy(SaverUser.data_dict, path_data_file)
         elif command == '2':
             menu.get_separator()
             Vacancies.list_vacancies = []
-            for i in saver.load_vacancy(path_data_file):
-                vacancies = VacanciesFromFile()
-                vacancies.get_vacancies(i)
+            for key, values in saver.load_vacancy(path_data_file).items():
+                saver.name_vacancy.append(key)
+                for i in values:
+                    vacancies = VacanciesFromFile()
+                    vacancies.get_vacancies(i)
             vacancies.get_print_list_vacancies()
+            menu.get_name_vacancy_from_file(saver.name_vacancy)
+            saver.name_vacancy = []
         elif command == '3':
             saver.delete_user_save(path_data_file)
         elif command == '0':
