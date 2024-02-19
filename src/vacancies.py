@@ -54,7 +54,6 @@ class Vacancies:
             i.get_print_class_field()
             MenuUser.get_separator()
 
-    # @staticmethod
     def get_top_vacancies(self, quantity: int) -> list:
         """
         Получение топ вакансий из отсортированного списка
