@@ -1,30 +1,24 @@
-from abc import ABC, abstractmethod
 import requests
 
-URL_HH_RU = 'https://api.hh.ru/vacancies?&area=1&only_with_salary=true'
+URL_HH_RU = 'https://api.hh.ru/vacancies'
 
 
-class VacanciesFromApi(ABC):
-    @abstractmethod
-    def get_vacancies_by_keys(self, text, salary):
-        pass
-
-
-class HHRuApi(VacanciesFromApi):
+class HHRuApi:
     """
     Класс для работы с API сервиса HH.ru
     """
 
     def __init__(self):
         self.__data_api = None
-        self.__response_keys = {'text': '', 'salary': '', 'per_page': '100'}
+        self.__response_keys = {'areas': 113, 'area': 1, 'only_with_salary': True, 'text': '', 'salary': '',
+                                'per_page': 100}
 
     def __str__(self) -> str:
         """
         Строка с названием сервиса
         :return: str
         """
-        return f'HH.ru'
+        return 'HH.ru'
 
     def get_vacancies_by_keys(self, text: str, salary: str) -> dict:
         """
@@ -39,10 +33,10 @@ class HHRuApi(VacanciesFromApi):
         return self.__data_api
 
     @staticmethod
-    def get_status_code() -> str:
+    def get_status_code() -> str | None:
         """
         Проверка доступности сервиса
-        :return: str
+        :return: str | None
         """
         response = requests.get(URL_HH_RU)
         if response.status_code >= 400:

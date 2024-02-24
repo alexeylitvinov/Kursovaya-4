@@ -2,7 +2,7 @@ import os
 
 from src.from_api import HHRuApi
 from src.menu import MenuUser
-from src.vacancies import Vacancies, VacanciesFromFile
+from src.vacancies import Vacancy, VacancyFromFile
 from src.saver import SaverUser
 
 path_data_file = 'data/data_api.json'
@@ -27,7 +27,7 @@ def user_main():
             menu.get_main_menu_second()
         command = menu.get_command()
         if command == '1':
-            Vacancies.list_vacancies = []
+            Vacancy.list_vacancies = []
             menu.get_separator()
             if hh_ru.get_status_code() == 'no service':
                 menu.get_answer(1)
@@ -37,8 +37,8 @@ def user_main():
             data = hh_ru.get_vacancies_by_keys(menu.name_vacancies, menu.salary)
             try:
                 for i in data['items']:
-                    vacancies = Vacancies()
-                    vacancies.get_vacancies(i)
+                    vacancies = Vacancy()
+                    vacancies.get_vacancy(i)
             except KeyError:
                 menu.get_answer(0)
             else:
@@ -46,25 +46,26 @@ def user_main():
                     menu.get_answer(0)
                 else:
                     num = menu.get_top_from_find(vacancies.list_vacancies)
-                    vacancies.get_top_vacancies(num)
+                    vacancies.list_vacancies = vacancies.get_top_vacancies(vacancies.list_vacancies, num)
                     vacancies.get_print_list_vacancies()
                     if menu.get_answer_for_save() is True:
                         if os.path.getsize(path_data_file) != 0:
                             SaverUser.data_dict = saver.load_vacancy(path_data_file)
                         for i in vacancies.list_vacancies:
+                            i.__dict__.pop('list_vacancies', None)
                             save_list.append(i.__dict__)
                         SaverUser.data_dict[menu.name_vacancies] = save_list
                         save_list = []
-                        Vacancies.list_vacancies = []
+                        Vacancy.list_vacancies = []
                         saver.save_vacancy(SaverUser.data_dict, path_data_file)
         elif command == '2':
             menu.get_separator()
-            Vacancies.list_vacancies = []
+            Vacancy.list_vacancies = []
             for key, values in saver.load_vacancy(path_data_file).items():
                 saver.name_vacancy.append(key)
                 for i in values:
-                    vacancies = VacanciesFromFile()
-                    vacancies.get_vacancies(i)
+                    vacancies = VacancyFromFile()
+                    vacancies.get_vacancy(i)
             vacancies.get_print_list_vacancies()
             menu.get_name_vacancy_from_file(saver.name_vacancy)
             saver.name_vacancy = []

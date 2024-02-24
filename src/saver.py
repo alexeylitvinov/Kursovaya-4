@@ -1,29 +1,17 @@
-from abc import ABC, abstractmethod
 import json
 
 
-class Saver(ABC):
-    pass
-
-    @abstractmethod
-    def load_vacancy(self, path_to_file):
-        pass
-
-    @abstractmethod
-    def save_vacancy(self, data, path_to_file):
-        pass
-
-    @abstractmethod
-    def delete_user_save(self, path_to_file):
-        pass
-
-
-class SaverUser(Saver):
+class SaverUser:
     """
     Класс загрузки из файла и сохранения в файл найденной информации
     """
     data_dict = {}
     name_vacancy = []
+
+    def __init__(self):
+        self.encoding = 'utf-8'
+        self.ident = 2
+        self.ensure_ascii = False
 
     def load_vacancy(self, path_to_file: str) -> dict:
         """
@@ -31,7 +19,7 @@ class SaverUser(Saver):
         :param path_to_file: str
         :return: dict
         """
-        with open(path_to_file, encoding='utf-8') as file:
+        with open(path_to_file, encoding=self.encoding) as file:
             data = json.load(file)
         return data
 
@@ -42,8 +30,8 @@ class SaverUser(Saver):
         :param path_to_file: str
         :return: file.json
         """
-        with open(path_to_file, 'w', encoding='utf-8') as file:
-            json.dump(data, file, indent=2, ensure_ascii=False)
+        with open(path_to_file, 'w', encoding=self.encoding) as file:
+            json.dump(data, file, indent=self.ident, ensure_ascii=self.ensure_ascii)
 
     def delete_user_save(self, path_to_file: str) -> None:
         """

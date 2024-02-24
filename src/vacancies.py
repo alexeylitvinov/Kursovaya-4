@@ -2,13 +2,14 @@ from src.function import delete_highlight, get_validation_text, get_validation_s
 from src.menu import MenuUser
 
 
-class Vacancies:
+class Vacancy:
     """
     Класс получения вакансий из запроса на сайт
     """
     list_vacancies = []
 
     def __init__(self):
+        self.city = None
         self.name = None
         self.salary_from = None
         self.salary_to = None
@@ -17,12 +18,13 @@ class Vacancies:
         self.requirement = None
         self.responsibility = None
 
-    def get_vacancies(self, data_api: dict):
+    def get_vacancy(self, data_api: dict):
         """
         Получение полей класса из запроса на сайт
         :param data_api: dict
         :return: class field
         """
+        self.city = data_api['area']['name']
         self.name = data_api['name']
         self.salary_from = get_validation_salary(data_api['salary']['from'])
         self.salary_to = get_validation_salary(data_api['salary']['to'])
@@ -37,6 +39,7 @@ class Vacancies:
         Выводим на экран поля класса
         :return: None
         """
+        print(self.city)
         print(self.name)
         print(self.salary_from)
         print(self.salary_to)
@@ -54,17 +57,19 @@ class Vacancies:
             i.get_print_class_field()
             MenuUser.get_separator()
 
-    def get_top_vacancies(self, quantity: int) -> list:
+    @staticmethod
+    def get_top_vacancies(list_vacancies, quantity: int) -> list:
         """
         Получение топ вакансий из отсортированного списка
+        :param list_vacancies: list
         :param quantity: int
         :return: list
         """
-        self.list_vacancies.sort(key=lambda x: x.salary_from, reverse=True)
-        return self.list_vacancies[:quantity]
+        list_vacancies.sort(key=lambda x: x.salary_from, reverse=True)
+        return list_vacancies[:quantity]
 
 
-class VacanciesFromFile(Vacancies):
+class VacancyFromFile(Vacancy):
     """
     Класс получения вакансий из сохраненного файла
     """
@@ -72,12 +77,13 @@ class VacanciesFromFile(Vacancies):
     def __init__(self):
         super().__init__()
 
-    def get_vacancies(self, data_api: dict):
+    def get_vacancy(self, data_api: dict):
         """
         Получение полей класса из сохраненного файла
         :param data_api: dict
         :return: class field
         """
+        self.city = data_api['city']
         self.name = data_api['name']
         self.salary_from = data_api['salary_from']
         self.salary_to = data_api['salary_to']

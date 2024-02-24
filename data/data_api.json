@@ -1,0 +1,258 @@
+{
+  "python": [
+    {
+      "city": "Москва",
+      "name": "Chief Technology Officer/CTO",
+      "salary_from": 800000,
+      "salary_to": 1200000,
+      "currency": "RUR",
+      "url": "https://hh.ru/vacancy/78157311",
+      "requirement": "Образование – высшее. Опыт работы в крупнейших мировых IT компаниях ( Google, Facebook, Microsoft, Amazon, Авито, Озон). Опыт работы в должности – более...",
+      "responsibility": "Руководство подразделением (100 чел). Организация процессов от идеи до авторского надзора. Контроль сроков и качества выполненных работ. Организация, проведение совещаний. "
+    },
+    {
+      "city": "Москва",
+      "name": "Chapter Backend Python Lead",
+      "salary_from": 500000,
+      "salary_to": 0,
+      "currency": "RUR",
+      "url": "https://hh.ru/vacancy/92266792",
+      "requirement": "Знание сильных сторон и особенностей Python. Опыт разработки серверных приложений на веб-фреймворках Python. Опыт проектирования и разработки распределенных отказоустойчивых...",
+      "responsibility": "В данный момент мы ищем функционального руководителя команды Python Backend разработки, которая участвует в создании и развитии следующих продуктов компании..."
+    },
+    {
+      "city": "Москва",
+      "name": "AI / ML engineer (relocation to UAE)",
+      "salary_from": 480000,
+      "salary_to": 500000,
+      "currency": "RUR",
+      "url": "https://hh.ru/vacancy/92816551",
+      "requirement": "Profound knowledge of deep learning architectures. - Proficiency in programming languages such as Python(mandatory), TypeScript (LangChain), C++, Java etc and...",
+      "responsibility": "English (colloquial) - for communication with the project team. An artificial intelligence engineer conducts innovative research in the field of artificial..."
+    },
+    {
+      "city": "Москва",
+      "name": "Backend Blockchain Разработчик",
+      "salary_from": 450000,
+      "salary_to": 600000,
+      "currency": "RUR",
+      "url": "https://hh.ru/vacancy/92764191",
+      "requirement": "Опыт в blockchain разработке, преимущественно DeFi-проекты. Знание любой из перечисленных технологий: Node.JS, Python, Go, Ruby. Опыт работы с Postgres...",
+      "responsibility": "Вы будете плотно работать над нестандартными задачами, такие как рыночная аналитика, исследование возможностей различных blockchain-проектов и их комбинирование в..."
+    },
+    {
+      "city": "Москва",
+      "name": "Backend-разработчик (Senior)",
+      "salary_from": 450000,
+      "salary_to": 0,
+      "currency": "RUR",
+      "url": "https://hh.ru/vacancy/93442013",
+      "requirement": "Опыт коммерческой разработки на Python от 5 лет. Знание популярных Python web фрейворков: Django, FastAPI, Flask. Опыт проектирования микросервисной архитектуры. ",
+      "responsibility": "Возможность влиять на развитие, видение продукта и на стратегию в целом."
+    },
+    {
+      "city": "Москва",
+      "name": "DevOps инженер / SRE",
+      "salary_from": 400000,
+      "salary_to": 600000,
+      "currency": "RUR",
+      "url": "https://hh.ru/vacancy/93147480",
+      "requirement": "Знание безопасности DevOps и управление доступом. - Скриптинг (Bash, Python). - Управление конфигурацией (Ansible, Puppet, Chef). - Основы сетей и сетевой безопасности. - ",
+      "responsibility": "8 backend разработчиков. - 4 QA. - DevOps. - Gitlab, Gitlab CI/CD. - Управление контейнерами (Docker, Kubernetes). - Решение сложных проблем."
+    },
+    {
+      "city": "Москва",
+      "name": "Lead/Senior Backend Developer",
+      "salary_from": 400000,
+      "salary_to": 500000,
+      "currency": "RUR",
+      "url": "https://hh.ru/vacancy/92655967",
+      "requirement": "Владение языками программирования для серверной части, такими как Java, Python, Node.js, Ruby и др. Опыт работы с серверными платформами, такими...",
+      "responsibility": "Проектирование, внедрение и поддержка архитектуры серверной части, обеспечивающей масштабируемость и производительность. Разработка баз данных и управление ими, включая разработку схем..."
+    },
+    {
+      "city": "Москва",
+      "name": "Программист С++ Senior",
+      "salary_from": 400000,
+      "salary_to": 700000,
+      "currency": "RUR",
+      "url": "https://hh.ru/vacancy/71147159",
+      "requirement": "Опыт коммерческой разработки на С++ от 3-х лет. Опыт работы с низкоуровневыми сетями, многопоточностью и асинхронностью. Опыт работы с...",
+      "responsibility": "Разработка приложений, работающих с биржевой инфраструктурой. Проектирование компонентов low-latency торговой платформы."
+    },
+    {
+      "city": "Москва",
+      "name": "Data Scientist, LLM & Generative AI",
+      "salary_from": 400000,
+      "salary_to": 0,
+      "currency": "RUR",
+      "url": "https://hh.ru/vacancy/92255383",
+      "requirement": "Ищем опытного Data Scientist с навыками MLOps, который: B. Построит процесс fine-tuning для производства высококачественного текстового контента:",
+      "responsibility": "И на собственных серверах обеспечиваем эти статьи отличными иллюстрациями через Stable Diffusion. C. Обернет модели в API."
+    },
+    {
+      "city": "Москва",
+      "name": "Tech Lead (Python, Django)",
+      "salary_from": 400000,
+      "salary_to": 600000,
+      "currency": "RUR",
+      "url": "https://hh.ru/vacancy/92710966",
+      "requirement": "Не указано",
+      "responsibility": "лидировать и писать код: разрабатывать, проводить code review и рефакторинг кода. — управлять небольшой командой (4–6 чел.) и процессами разработки. — "
+    }
+  ],
+  "director": [
+    {
+      "city": "Москва",
+      "name": "Коммерческий директор B2B/B2G (IT Enterprise Hardware)",
+      "salary_from": 3000000,
+      "salary_to": 0,
+      "currency": "RUR",
+      "url": "https://hh.ru/vacancy/92973797",
+      "requirement": "Опыт, который пригодится: Опыт работы с большими оборотами - навык из 1 млрд рублей делать 20 млрд. Оборот последних 3 компаний...",
+      "responsibility": "Цель должности: Развить коммерческую работу в компании: отстроить коммерческий блок, трансформировать процесс генерации прибыли. В зоне ответственности несколько направлений: маркетинг..."
+    },
+    {
+      "city": "Москва",
+      "name": "Инвестиционный директор",
+      "salary_from": 3000000,
+      "salary_to": 0,
+      "currency": "RUR",
+      "url": "https://hh.ru/vacancy/92343566",
+      "requirement": "Проблемные активы от 1 млрд. -Валютные проекты от 1 млн. -Медицинские проекты от 100 млн с окупаемостью 1-2 года. -",
+      "responsibility": "Девелоперские проекты в Москве. Активное развитие деловых связей с инвесторами."
+    },
+    {
+      "city": "Москва",
+      "name": "Директор проекта / Руководитель проекта (девелопмент)",
+      "salary_from": 1000000,
+      "salary_to": 2000000,
+      "currency": "RUR",
+      "url": "https://hh.ru/vacancy/92000649",
+      "requirement": "Высшее профильное образование. Опыт работы на стороне Заказчика-Застройщика / Инвестора на аналогичной должности не менее 5 лет. Опыт реализации полного...",
+      "responsibility": "Максимизировать прибыль от реализации проекта. Организовать слаженную работу команды проекта. Управлять полным циклом реализации девелоперского проекта (с момента оценки земельного..."
+    },
+    {
+      "city": "Москва",
+      "name": "Директор по развитию бизнеса",
+      "salary_from": 200000,
+      "salary_to": 1500000,
+      "currency": "RUR",
+      "url": "https://hh.ru/vacancy/92779290",
+      "requirement": "Отличный текущий networking среди, СЕО, Коммерческих директоров, Директоров по развитию. Высокие коммуникативные навыки. Проактивный подход. Ответственность. Высшее образование. ",
+      "responsibility": "Развитие портфеля Проектов с привлечением новых Клиентов. Business Development с подключением новых Клиентов по Девелопменту. Активные встречи с Клиентами, как..."
+    },
+    {
+      "city": "Москва",
+      "name": "Коммерческий директор",
+      "salary_from": 150000,
+      "salary_to": 2000000,
+      "currency": "RUR",
+      "url": "https://hh.ru/vacancy/92814100",
+      "requirement": "Опыт.",
+      "responsibility": "Разработка стратегии развития Компании, внедрение новых бизнес-моделей и подходов в области продаж. Обеспечение рентабельности продаж. Управление сотрудниками коммерческого отдела..."
+    },
+    {
+      "city": "Москва",
+      "name": "Менеджер по работе с Девелоперами (Застройщиками)",
+      "salary_from": 150000,
+      "salary_to": 1500000,
+      "currency": "RUR",
+      "url": "https://hh.ru/vacancy/92631336",
+      "requirement": "Профессиональный опыт и знания: Подтвержденный опыт работы минимум с 50-ю Девелоперами Москвы. Что мы ждём от ТПС ? ",
+      "responsibility": "При отзыве, обязательно прилагайте письмо с вашими ответами на вопросы:"
+    },
+    {
+      "city": "Москва",
+      "name": "Директор студии дизайна интерьера",
+      "salary_from": 70000,
+      "salary_to": 2000000,
+      "currency": "RUR",
+      "url": "https://hh.ru/vacancy/92429693",
+      "requirement": "Что мы ждём от ТПС ? Профессионализма в своей области, опыта успешного достижения целей не менее 5 лет, Высокой Результативности и...",
+      "responsibility": "Ваша ответственность – производство дизайнов интерьера и вся работа дизайн бюро связанная с этим, начиная с набора сотрудников и заканчивая контролем..."
+    },
+    {
+      "city": "Москва",
+      "name": "Генеральный директор/Управляющий партнер нефтетрейдинговой компании",
+      "salary_from": 0,
+      "salary_to": 1500000,
+      "currency": "USD",
+      "url": "https://hh.ru/vacancy/93686721",
+      "requirement": "Высшее образование. Опыт работы в трейдинге нефтепродуктов от 10 лет. Опыт работы на руководящих должностях от 5 лет. ",
+      "responsibility": "Светлые нефтепродукты. Темные нефтепродукты. Углеводородное сырье. Нефтехимия. Смазочные материалы. Проведение торговых операций. Анализ рынка. Управление рисками. Разработка торговых стратегий. "
+    },
+    {
+      "city": "Москва",
+      "name": "Директор по развитию бизнеса автозапчастей для отечественных грузовиков",
+      "salary_from": 0,
+      "salary_to": 1500000,
+      "currency": "RUR",
+      "url": "https://hh.ru/vacancy/93592588",
+      "requirement": "Знание рынка грузовых отечественных автозапчастей. Знание клиентов и поставщиков. Понимание как на этот конкурентный рынок ворваться новому игроку. ",
+      "responsibility": "Не указано"
+    },
+    {
+      "city": "Москва",
+      "name": "Директор по развитию бизнеса запасных частей для легковых автомобилей",
+      "salary_from": 0,
+      "salary_to": 1500000,
+      "currency": "RUR",
+      "url": "https://hh.ru/vacancy/89796956",
+      "requirement": "Знание рынка легковой тематики, знание клиентов и поставщиков. Глубокое понимание рынка з/ч, какие зоны роста есть, но еще не...",
+      "responsibility": "Не указано"
+    }
+  ],
+  "web office": [
+    {
+      "city": "Москва",
+      "name": "Senior Frontend Developer",
+      "salary_from": 5000,
+      "salary_to": 0,
+      "currency": "EUR",
+      "url": "https://hh.ru/vacancy/92465638",
+      "requirement": "...experience with Nodejs in high-load projects. Experience in building application architecture from scratch. Experience with streaming on the web.",
+      "responsibility": "Development of new site functionality, implementation of new features. Duties to optimize application, rewrite code to new standards, implement best..."
+    },
+    {
+      "city": "Москва",
+      "name": "Tech Lead / Technical Architect",
+      "salary_from": 5000,
+      "salary_to": 0,
+      "currency": "USD",
+      "url": "https://hh.ru/vacancy/92299257",
+      "requirement": "Work experience of at least 5 years as a Architect / Tech Lead / Senior Developer. Deep understanding of software design and...",
+      "responsibility": "Full-time position, permanent contract, flexible working hours. On-site lunches in the office in the center of Yerevan. "
+    },
+    {
+      "city": "Москва",
+      "name": "Business Development Manager (Web3, Crypto)",
+      "salary_from": 5000,
+      "salary_to": 8000,
+      "currency": "USD",
+      "url": "https://hh.ru/vacancy/93362038",
+      "requirement": "Have 2-3 years experience as business development manager in crypto/web3 or ventures (VC). Fluent English speaker, as...",
+      "responsibility": "Our company's revenue has grown by 80% over the past year, and we are not going to stop there. "
+    },
+    {
+      "city": "Москва",
+      "name": "Senior backend Node.js developer",
+      "salary_from": 5000,
+      "salary_to": 0,
+      "currency": "USD",
+      "url": "https://hh.ru/vacancy/92173056",
+      "requirement": "5+ years of commercial experience in web development. Commercial experience of working with high loaded SQL or NO SQL...",
+      "responsibility": "In-house platform development. 3rd party API integrations. Actively participate in developing new features from scratch."
+    },
+    {
+      "city": "Москва",
+      "name": "Chief Marketing Officer / CMO (Web3 _ Blockchain _ Game)",
+      "salary_from": 4000,
+      "salary_to": 7000,
+      "currency": "USD",
+      "url": "https://hh.ru/vacancy/93485177",
+      "requirement": "Опыт работы руководителем отдела маркетинга в одной или более релевантных вакансии ниш от 5 лет. Английский язык от Upper-Intermediate...",
+      "responsibility": "Выстраивать и поддерживать эффективную работу команды маркетинга. Разрабатывать и участвовать в реализации квартального и годового плана продаж в части лидогенерации..."
+    }
+  ]
+}

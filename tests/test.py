@@ -1,10 +1,11 @@
 from src.from_api import HHRuApi
-from src.vacancies import Vacancies
+from src.vacancies import Vacancy
 from src.function import delete_highlight, get_validation_text, get_validation_salary
 
 
 def test_create_vacancies():
-    vacancies = Vacancies()
+    vacancies = Vacancy()
+    assert vacancies.city is None
     assert vacancies.name is None
     assert vacancies.salary_from is None
     assert vacancies.salary_to is None
@@ -19,8 +20,8 @@ def test_get_vacancies():
     hh_ru = HHRuApi()
     data = hh_ru.get_vacancies_by_keys('python', '100000')
     for i in data['items']:
-        vacancies = Vacancies()
-        vacancies.get_vacancies(i)
+        vacancies = Vacancy()
+        vacancies.get_vacancy(i)
     assert len(vacancies.list_vacancies) == 100
 
 
