@@ -254,5 +254,107 @@
       "requirement": "Опыт работы руководителем отдела маркетинга в одной или более релевантных вакансии ниш от 5 лет. Английский язык от Upper-Intermediate...",
       "responsibility": "Выстраивать и поддерживать эффективную работу команды маркетинга. Разрабатывать и участвовать в реализации квартального и годового плана продаж в части лидогенерации..."
     }
+  ],
+  "operator": [
+    {
+      "city": "Москва",
+      "name": "Team Lead Golang",
+      "salary_from": 650000,
+      "salary_to": 700000,
+      "currency": "RUR",
+      "url": "https://hh.ru/vacancy/92828670",
+      "requirement": "Experience working with message brokers and a deep understanding of how they operate. Advanced understanding of microservices architecture design principles. ",
+      "responsibility": "Designing and developing high-load services from scratch. Identify problems in application's code and form refactoring tasks, decompose story..."
+    },
+    {
+      "city": "Москва",
+      "name": "Service Engineer / Technical expert",
+      "salary_from": 600000,
+      "salary_to": 0,
+      "currency": "RUR",
+      "url": "https://hh.ru/vacancy/92545657",
+      "requirement": "Higher technical education. Experience in a similar position (5+ years experience). Knowledge of the underground mining equipment market, experience...",
+      "responsibility": "Researching the equipment market for underground mining operations. Analyzing the market for mining machines and equipment, comparative analysis. "
+    },
+    {
+      "city": "Москва",
+      "name": "Full-stack web developer (relocation to UAE)",
+      "salary_from": 480000,
+      "salary_to": 500000,
+      "currency": "RUR",
+      "url": "https://hh.ru/vacancy/92816196",
+      "requirement": "Experience with PHP in details. Knowledge of the Symfony stack (Doctrine, Forms, Events, Twig, etc.) will be an advantage. ",
+      "responsibility": "Implementation of new functionality from design layout to working solution. - Operation of the company's AI systems and services, revision..."
+    },
+    {
+      "city": "Москва",
+      "name": "DevOps engineer (relocation to UAE)",
+      "salary_from": 480000,
+      "salary_to": 500000,
+      "currency": "RUR",
+      "url": "https://hh.ru/vacancy/92817506",
+      "requirement": "English, technical - for reading library documentation. 5. Implementing and managing configuration management tools, such as Ansible / Puppet / ELK / Sentry. 1. ",
+      "responsibility": "...operators, and other IT staff to manage code releases and automation processes. The DevOps Engineer continuously strives to improve operational..."
+    },
+    {
+      "city": "Москва",
+      "name": "Коммерческий директор (ССO)",
+      "salary_from": 400000,
+      "salary_to": 0,
+      "currency": "RUR",
+      "url": "https://hh.ru/vacancy/93163784",
+      "requirement": "English language not lower than C1!. - Minimum 5 years of experience as a commercial director. - Experience in GR communications. - ",
+      "responsibility": "...s operational activities in the field of sales and marketing. - Ensure strategic planning and sustainable execution of strategic operating plans. - "
+    },
+    {
+      "city": "Москва",
+      "name": "Senior IOS разработчик",
+      "salary_from": 380000,
+      "salary_to": 530000,
+      "currency": "RUR",
+      "url": "https://hh.ru/vacancy/93433492",
+      "requirement": "Опыт работы с CocoaPods(умение создавать и поддерживать Podы). Опыт работы с многопоточностью(Operations, GCD). Знание языков: Swift/Objective-C...",
+      "responsibility": "Участие в полном цикле продуктовой разработки — начиная от проектирования контрактов клиент-серверного взаимодействия и заканчивая покрытием тестами и внедрением..."
+    },
+    {
+      "city": "Москва",
+      "name": "Руководитель проектного офиса",
+      "salary_from": 350000,
+      "salary_to": 0,
+      "currency": "RUR",
+      "url": "https://hh.ru/vacancy/93627626",
+      "requirement": "Знание различных методологий проектного менеджмента. Опыт лидирования функции Sales & Operational Planning. Умение оценивать риски и находить решения возникающих сложностей при...",
+      "responsibility": "Стратегическое планирование и управление проектами: выбор приоритетных проектов, соответствующих целям компании, определение критериев проекта, консультирование менеджмента по соотношению затрат и..."
+    },
+    {
+      "city": "Москва",
+      "name": "Android разработчик (удаленно)",
+      "salary_from": 350000,
+      "salary_to": 0,
+      "currency": "RUR",
+      "url": "https://hh.ru/vacancy/92420414",
+      "requirement": "Знания Java Core/Kotlin. Опыт с RxJava (Scheduler, Observable, Subscriber, Rx operators). Опыт с Git, Jira, Confluence. Опыт работы с...",
+      "responsibility": "Дизайн, разработка и поддержка приложений для Android. Оценка разработки проекта и реализации задач. Участие в обсуждении процессов разработки и их..."
+    },
+    {
+      "city": "Москва",
+      "name": "Операционный директор / Chief Operating Officer",
+      "salary_from": 350000,
+      "salary_to": 500000,
+      "currency": "RUR",
+      "url": "https://hh.ru/vacancy/93237766",
+      "requirement": "Опыт в инжиниринговой компании (совмещение проектирования и строительства). Опыт в энергетике (реализация проектов).",
+      "responsibility": "Взаимодействие с заказчиками. Представление интересов заказчика. Исполнение договоров. Планирование финансовой составляющей. Составление графика получения авансов. Составление графиков сдачи выполненных работ. "
+    },
+    {
+      "city": "Москва",
+      "name": "Senior Data Scientist в команду «Матчинг»",
+      "salary_from": 330000,
+      "salary_to": 450000,
+      "currency": "RUR",
+      "url": "https://hh.ru/vacancy/83575438",
+      "requirement": "Понимание основных принципов и алгоритмов машинного обучения, знаешь, что такое Operations Research. Аналитическое и бизнес-ориентированное мышление. Сможешь вникнуть в...",
+      "responsibility": "Влиять на вектор развития инфраструктуры работы с данными и деплоя моделей: как сократить путь от исследования до продакшена. "
+    }
   ]
 }

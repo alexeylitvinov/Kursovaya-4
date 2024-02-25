@@ -7,7 +7,6 @@ class HHRuApi:
     """
     Класс для работы с API сервиса HH.ru
     """
-
     def __init__(self):
         self.__data_api = None
         self.__response_keys = {'areas': 113, 'area': 1, 'only_with_salary': True, 'text': '', 'salary': '',
@@ -33,14 +32,15 @@ class HHRuApi:
         return self.__data_api
 
     @staticmethod
-    def get_status_code() -> str | None:
+    def get_status_code() -> bool:
         """
         Проверка доступности сервиса
-        :return: str | None
+        :return: bool
         """
         response = requests.get(URL_HH_RU)
         if response.status_code >= 400:
-            return f'no service'
+            return False
+        return True
 
     def __get_response(self) -> dict:
         """

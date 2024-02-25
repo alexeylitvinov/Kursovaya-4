@@ -2,7 +2,6 @@ class MenuUser:
     """
     Класс пользовательского меню
     """
-
     def __init__(self):
         self.__num_answer = None
         self.__command = None
@@ -71,11 +70,11 @@ class MenuUser:
         self.__command = input('Введите команду: ')
         return self.__command
 
-    def get_answer(self, num_answer: int) -> str:
+    def get_answer(self, num_answer: int) -> None:
         """
         Список ответов пользователю. Возвращаем ответ (элемент списка)
         :param num_answer: int
-        :return: str
+        :return: None
         """
         answer_list = [
             'По таким критериям ничего не найдено',

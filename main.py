@@ -29,7 +29,7 @@ def user_main():
         if command == '1':
             Vacancy.list_vacancies = []
             menu.get_separator()
-            if hh_ru.get_status_code() == 'no service':
+            if hh_ru.get_status_code() is False:
                 menu.get_answer(1)
                 break
             menu.get_key_world_for_find()
