@@ -7,9 +7,10 @@ class HHRuApi:
     """
     Класс для работы с API сервиса HH.ru
     """
+
     def __init__(self):
         self.__data_api = None
-        self.__response_keys = {'areas': 113, 'area': 1, 'only_with_salary': True, 'text': '', 'salary': '',
+        self.__response_keys = {'areas': 113, 'area': '', 'only_with_salary': True, 'text': '', 'salary': '',
                                 'per_page': 100}
 
     def __str__(self) -> str:
@@ -19,13 +20,15 @@ class HHRuApi:
         """
         return 'HH.ru'
 
-    def get_vacancies_by_keys(self, text: str, salary: str) -> dict:
+    def get_vacancies_by_keys(self, area: str, text: str, salary: str) -> dict:
         """
         Получение вакансий в формате .json по ключам: ключевое слово, предполагаемая зарплата, количество вакансий.
+        :param area: str
         :param text: str
         :param salary: str
         :return: dict
         """
+        self.__response_keys['area'] = area
         self.__response_keys['text'] = text
         self.__response_keys['salary'] = salary
         self.__data_api = HHRuApi.__get_response(self)

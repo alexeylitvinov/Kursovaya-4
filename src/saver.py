@@ -13,7 +13,7 @@ class SaverUser:
         self.ident = 2
         self.ensure_ascii = False
 
-    def load_vacancy(self, path_to_file: str) -> dict:
+    def load_data(self, path_to_file: str) -> dict:
         """
         Загрузка данных из .json файла
         :param path_to_file: str
@@ -33,7 +33,8 @@ class SaverUser:
         with open(path_to_file, 'w', encoding=self.encoding) as file:
             json.dump(data, file, indent=self.ident, ensure_ascii=self.ensure_ascii)
 
-    def delete_user_save(self, path_to_file: str) -> None:
+    @staticmethod
+    def delete_user_save(path_to_file: str) -> None:
         """
         Очистка файла
         :param path_to_file:

@@ -1,13 +1,20 @@
+from src.saver import SaverUser
+
+
 class MenuUser:
     """
     Класс пользовательского меню
     """
+    load_city_data = SaverUser()
+    data_city = load_city_data.load_data('data/city.json')
+
     def __init__(self):
         self.__num_answer = None
         self.__command = None
-        self.number_vacancies = None
-        self.salary = None
-        self.name_vacancies = None
+        self.key_city = None
+        self.key_world = None
+        self.key_salary = None
+        self.top_vacancies = None
 
     @staticmethod
     def get_hello(string: str):
@@ -85,6 +92,19 @@ class MenuUser:
         self.__num_answer = answer_list[num_answer]
         print(f'{self.__num_answer}')
 
+    def get_key_city_from_find(self) -> str:
+        while True:
+            user_input = input('Введите город для поиска вакансий (кириллицей): ').title()
+            for i in MenuUser.data_city:
+                for key, value in i.items():
+                    if value == user_input:
+                        self.key_city = key
+            if self.key_city is None:
+                print('Не верно введено название города или такой город не найден...')
+            else:
+                break
+        return self.key_city
+
     def get_key_world_for_find(self) -> str:
         """
         Получение ключевого слова от пользователя по вакансиям с проверкой правильности введенных данных
@@ -95,9 +115,9 @@ class MenuUser:
             if user_input.isdigit() or user_input is None:
                 print('Не верно введено ключевое слово...')
             else:
-                self.name_vacancies = user_input
+                self.key_world = user_input
                 break
-        return self.name_vacancies
+        return self.key_world
 
     def get_key_salary_for_find(self) -> int:
         """
@@ -109,9 +129,9 @@ class MenuUser:
             if user_input.isnumeric() is False or user_input is None or int(user_input) <= 0:
                 print('На ввод доступны только числа...')
             else:
-                self.salary = int(user_input)
+                self.key_salary = int(user_input)
                 break
-        return self.salary
+        return self.key_salary
 
     def get_top_from_find(self, data_list: list) -> int:
         """
@@ -125,7 +145,7 @@ class MenuUser:
             elif int(user_input) > len(data_list):
                 print(f'Найдено {len(data_list)} вакансий. Вы пытаетесь посмотреть больше...')
             else:
-                self.number_vacancies = int(user_input)
+                self.top_vacancies = int(user_input)
                 break
         MenuUser.get_separator()
-        return self.number_vacancies
+        return self.top_vacancies
